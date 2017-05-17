@@ -8,6 +8,17 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+
+
+// AF2 Settings
+export const firebaseConfig = {
+  apiKey: "AIzaSyBSLa8vdXzjY0J6wF7g-8nZ5OwBCET4CsU",
+  authDomain: "angularfire2-list-exampl-8b16b.firebaseapp.com",
+  databaseURL: "https://angularfire2-list-exampl-8b16b.firebaseio.com",
+  storageBucket: "",
+  messagingSenderId: "17272854833"
+};
 
 @NgModule({
   declarations: [
@@ -17,6 +28,7 @@ import { AngularFireModule } from 'angularfire2';
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -31,13 +43,5 @@ import { AngularFireModule } from 'angularfire2';
   ]
 })
 
-// AF2 Settings
-export const firebaseConfig = {
-  apiKey: "AIzaSyBSLa8vdXzjY0J6wF7g-8nZ5OwBCET4CsU",
-  authDomain: "angularfire2-list-exampl-8b16b.firebaseapp.com",
-  databaseURL: "https://angularfire2-list-exampl-8b16b.firebaseio.com",
-  storageBucket: "angularfire2-list-exampl-8b16b.appspot.com",
-  messagingSenderId: "17272854833"
-};
 
 export class AppModule {}
